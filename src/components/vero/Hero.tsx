@@ -65,11 +65,11 @@ export function Hero() {
               </h1>
 
               <p
-                className="vero-fade-up mt-7 text-[16px] sm:text-[17px] leading-relaxed font-light max-w-lg"
+                className="vero-fade-up mt-7 text-[16px] sm:text-[17px] leading-relaxed font-light max-w-lg whitespace-pre-line"
                 style={{ color: "var(--vero-muted)", animationDelay: "0.4s" }}
               >
-                Projetadas, fabricadas e instaladas sob medida. Alto padrão em PVC pela maior
-                indústria da América Latina.
+                Projetadas, fabricadas e instaladas sob medida.{"\n"}
+                Alto padrão em PVC pela maior indústria da América Latina.
               </p>
 
               <div className="vero-fade-up mt-10 flex flex-wrap items-center gap-6" style={{ animationDelay: "0.55s" }}>

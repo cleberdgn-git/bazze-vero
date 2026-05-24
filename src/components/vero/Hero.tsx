@@ -20,7 +20,7 @@ export function Hero() {
               style={{ backgroundColor: "rgba(26,26,24,0.18)" }}
               aria-hidden
             />
-            <img src={logoBazze} alt="Bazze PVC" className="h-7 w-auto object-contain" />
+            <img src={logoBazze} alt="Bazze PVC" className="h-11 w-auto object-contain" />
           </a>
 
           <ul className="hidden md:flex items-center gap-9 text-[13px]" style={{ color: "var(--vero-ink)" }}>

@@ -6,11 +6,14 @@ const navLinks = ["Parceria", "Produtos", "Vantagens", "Obras", "Contato"];
 
 export function Hero() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "var(--vero-bg)", color: "var(--vero-ink)" }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: "var(--vero-bg)", color: "var(--vero-ink)" }}>
       {/* Navbar */}
       <header
-        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b"
-        style={{ backgroundColor: "rgba(248, 245, 240, 0.78)", borderColor: "rgba(26,26,24,0.08)" }}
+        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-[6px]"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(248,245,240,0.85) 0%, rgba(248,245,240,0.55) 60%, rgba(248,245,240,0) 100%)",
+        }}
       >
         <nav className="mx-auto max-w-[1400px] px-6 lg:px-10 h-20 flex items-center justify-between">
           <a href="/" className="flex items-center gap-5" aria-label="Vero · Bazze PVC">
@@ -42,10 +45,34 @@ export function Hero() {
       </header>
 
       {/* Hero */}
-      <section className="pt-20 min-h-screen flex">
-        <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
-          {/* Left content */}
-          <div className="order-2 lg:order-1 flex items-center px-6 sm:px-10 lg:px-16 py-14 lg:py-20">
+      <section className="relative min-h-screen w-full overflow-hidden">
+        {/* Background image — full width, behind header */}
+        <img
+          src={heroImage}
+          alt="Residência de alto padrão com esquadrias Vero · Bazze PVC e vista para o mar"
+          className="vero-image-in absolute inset-0 h-full w-full object-cover"
+        />
+
+        {/* Horizontal fade (desktop) — left side reads as background, right reveals image */}
+        <div
+          className="absolute inset-0 pointer-events-none hidden lg:block"
+          style={{
+            background:
+              "linear-gradient(to right, var(--vero-bg) 0%, var(--vero-bg) 28%, rgba(248,245,240,0.88) 46%, rgba(248,245,240,0.35) 62%, rgba(248,245,240,0) 78%)",
+          }}
+        />
+        {/* Vertical fade (mobile) — text sits over a clarified bottom area */}
+        <div
+          className="absolute inset-0 pointer-events-none lg:hidden"
+          style={{
+            background:
+              "linear-gradient(to top, var(--vero-bg) 0%, rgba(248,245,240,0.92) 40%, rgba(248,245,240,0.4) 70%, rgba(248,245,240,0) 100%)",
+          }}
+        />
+
+        {/* Content */}
+        <div className="relative z-10 mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16 pt-32 lg:pt-40 pb-14 lg:pb-20 min-h-screen flex items-center">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2">
             <div className="max-w-xl w-full">
               <div className="vero-fade-up flex items-center gap-3 mb-8" style={{ animationDelay: "0.1s" }}>
                 <span className="block h-px w-8" style={{ backgroundColor: "var(--vero-gold)" }} />
@@ -112,47 +139,32 @@ export function Hero() {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Right image */}
-          <div className="order-1 lg:order-2 relative h-[40vh] lg:h-auto lg:min-h-[calc(100vh-4rem)] overflow-hidden">
-            <img
-              src={heroImage}
-              alt="Residência de alto padrão com esquadrias Vero · Bazze PVC e vista para o mar"
-              className="vero-image-in absolute inset-0 h-full w-full object-cover"
-            />
-            {/* Gradient bottom */}
-            <div
-              className="absolute inset-x-0 bottom-0 h-1/3 pointer-events-none"
-              style={{ background: "linear-gradient(to top, rgba(26,26,24,0.45), transparent)" }}
-            />
+        {/* Floating badges over the image area */}
+        <div
+          className="vero-fade-up hidden lg:flex absolute top-28 right-6 lg:right-10 px-4 py-2 rounded-full text-[10px] tracking-[0.22em] uppercase backdrop-blur-md border z-10"
+          style={{
+            backgroundColor: "rgba(248,245,240,0.7)",
+            borderColor: "rgba(248,245,240,0.6)",
+            color: "var(--vero-ink)",
+            animationDelay: "1.1s",
+          }}
+        >
+          PBQP-H <span style={{ color: "var(--vero-gold-deep)" }}>/</span> Único no RS
+        </div>
 
-            {/* Top-right badge */}
-            <div
-              className="vero-fade-up absolute top-5 right-5 px-4 py-2 rounded-full text-[10px] tracking-[0.22em] uppercase backdrop-blur-md border"
-              style={{
-                backgroundColor: "rgba(248,245,240,0.7)",
-                borderColor: "rgba(248,245,240,0.6)",
-                color: "var(--vero-ink)",
-                animationDelay: "1.1s",
-              }}
-            >
-              PBQP-H <span style={{ color: "var(--vero-gold-deep)" }}>/</span> Único no RS
-            </div>
-
-            {/* Bottom-left badge */}
-            <div
-              className="vero-fade-up absolute bottom-6 left-6 flex items-center gap-2 px-4 py-2.5 rounded-full text-[12px] backdrop-blur-md border"
-              style={{
-                backgroundColor: "rgba(248,245,240,0.78)",
-                borderColor: "rgba(248,245,240,0.6)",
-                color: "var(--vero-ink)",
-                animationDelay: "1.25s",
-              }}
-            >
-              <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--vero-gold-deep)" }} />
-              Projeto executado pela Vero
-            </div>
-          </div>
+        <div
+          className="vero-fade-up hidden lg:flex absolute bottom-8 right-6 lg:right-10 items-center gap-2 px-4 py-2.5 rounded-full text-[12px] backdrop-blur-md border z-10"
+          style={{
+            backgroundColor: "rgba(248,245,240,0.78)",
+            borderColor: "rgba(248,245,240,0.6)",
+            color: "var(--vero-ink)",
+            animationDelay: "1.25s",
+          }}
+        >
+          <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--vero-gold-deep)" }} />
+          Projeto executado pela Vero
         </div>
       </section>
     </div>

@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Vero & Bazze PVC" },
+      { name: "description", content: "Site Vero, parceira oficial Bazze PVC em Santa Maria e Região." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Vero & Bazze PVC" },
+      { property: "og:description", content: "Site Vero, parceira oficial Bazze PVC em Santa Maria e Região." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Vero & Bazze PVC" },
+      { name: "twitter:description", content: "Site Vero, parceira oficial Bazze PVC em Santa Maria e Região." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/7ksRT1xPROOHtVFqtouaca6fgK22/social-images/social-1779648830618-VERO_(7).webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/7ksRT1xPROOHtVFqtouaca6fgK22/social-images/social-1779648830618-VERO_(7).webp" },
     ],
     links: [
       {

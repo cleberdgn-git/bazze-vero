@@ -56,12 +56,12 @@ export function Hero() {
           className="vero-image-in absolute inset-0 h-full w-full object-cover"
         />
 
-        {/* Horizontal fade (desktop) — left side reads as background, right reveals image */}
+        {/* Horizontal fade (desktop) — very light wash so the photo keeps strong presence */}
         <div
           className="absolute inset-0 pointer-events-none hidden lg:block"
           style={{
             background:
-              "linear-gradient(to right, var(--vero-bg) 0%, var(--vero-bg) 28%, rgba(248,245,240,0.88) 46%, rgba(248,245,240,0.35) 62%, rgba(248,245,240,0) 78%)",
+              "linear-gradient(to right, rgba(248,245,240,0.15) 0%, rgba(248,245,240,0.05) 35%, rgba(248,245,240,0) 60%)",
           }}
         />
         {/* Vertical fade (mobile) — text sits over a clarified bottom area */}

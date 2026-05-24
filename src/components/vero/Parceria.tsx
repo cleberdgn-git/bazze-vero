@@ -99,23 +99,6 @@ export function Parceria() {
                 type="video/mp4"
               />
             </video>
-            {/* Soft edge fade — blends the video into the page background */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 rounded-[12px]"
-              style={{
-                background:
-                  "linear-gradient(to right, var(--vero-bg) 0%, rgba(248,245,240,0) 3%, rgba(248,245,240,0) 97%, var(--vero-bg) 100%), linear-gradient(to bottom, var(--vero-bg) 0%, rgba(248,245,240,0) 3%, rgba(248,245,240,0) 97%, var(--vero-bg) 100%)",
-                mixBlendMode: "normal",
-              }}
-            />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 rounded-[12px]"
-              style={{
-                boxShadow: "inset 0 0 20px 6px var(--vero-bg)",
-              }}
-            />
           </div>
         </div>
       </div>

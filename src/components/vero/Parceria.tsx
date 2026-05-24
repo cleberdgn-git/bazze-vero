@@ -14,6 +14,15 @@ export function Parceria() {
       className="relative w-full py-24 lg:py-32"
       style={{ backgroundColor: "var(--vero-bg)", color: "var(--vero-ink)" }}
     >
+      {/* Top fade — dissolves the seam between hero image and this section */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-0 right-0 -top-32 h-32"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(248,245,240,0) 0%, rgba(248,245,240,0.35) 45%, rgba(248,245,240,0.75) 75%, var(--vero-bg) 100%)",
+        }}
+      />
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left content */}

@@ -16,7 +16,7 @@ export function Hero() {
         }}
       >
         <nav
-          className="mx-auto max-w-[1400px] px-6 lg:px-10 h-20 flex items-center justify-between"
+          className="mx-auto max-w-[1680px] px-6 lg:px-12 xl:px-16 2xl:px-20 h-20 flex items-center justify-between"
           style={{ filter: "drop-shadow(0 1px 1px rgba(26,26,24,0.12))" }}
         >
           <a href="/" className="flex items-center gap-5" aria-label="Vero · Bazze PVC">
@@ -74,7 +74,7 @@ export function Hero() {
         />
 
         {/* Content */}
-        <div className="relative z-10 mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16 pt-32 lg:pt-40 pb-14 lg:pb-20 min-h-screen flex items-center">
+        <div className="relative z-10 mx-auto max-w-[1680px] px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-28 pt-32 lg:pt-40 pb-14 lg:pb-20 min-h-screen flex items-center">
           <div className="w-full grid grid-cols-1 lg:grid-cols-2">
             <div className="max-w-xl w-full">
               <div className="vero-fade-up flex items-center gap-3 mb-8" style={{ animationDelay: "0.1s" }}>

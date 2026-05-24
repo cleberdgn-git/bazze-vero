@@ -9,13 +9,16 @@ export function Hero() {
     <div className="min-h-screen relative" style={{ backgroundColor: "var(--vero-bg)", color: "var(--vero-ink)" }}>
       {/* Navbar */}
       <header
-        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-[6px]"
+        className="fixed top-0 left-0 right-0 z-50"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(248,245,240,0.85) 0%, rgba(248,245,240,0.55) 60%, rgba(248,245,240,0) 100%)",
+            "linear-gradient(to bottom, rgba(248,245,240,0.55) 0%, rgba(248,245,240,0.25) 55%, rgba(248,245,240,0) 100%)",
         }}
       >
-        <nav className="mx-auto max-w-[1400px] px-6 lg:px-10 h-20 flex items-center justify-between">
+        <nav
+          className="mx-auto max-w-[1400px] px-6 lg:px-10 h-20 flex items-center justify-between"
+          style={{ filter: "drop-shadow(0 1px 1px rgba(26,26,24,0.12))" }}
+        >
           <a href="/" className="flex items-center gap-5" aria-label="Vero · Bazze PVC">
             <img src={logoVero} alt="Vero — Esquadrias em PVC" className="h-11 w-auto object-contain" />
             <span

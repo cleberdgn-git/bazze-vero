@@ -96,7 +96,7 @@ export function Hero() {
                 style={{ borderColor: "rgba(26,26,24,0.12)", animationDelay: "0.7s" }}
               >
                 {[
-                  { k: "22k m²", v: "parque fabril" },
+                  { k: "22.000 m²", v: "parque fabril" },
                   { k: "PBQP-H", v: "único no RS" },
                   { k: "100%", v: "sob medida" },
                 ].map((s) => (

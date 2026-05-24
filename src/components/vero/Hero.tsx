@@ -20,13 +20,13 @@ export function Hero() {
           style={{ filter: "drop-shadow(0 1px 1px rgba(26,26,24,0.12))" }}
         >
           <a href="/" className="flex items-center gap-5" aria-label="Vero · Bazze PVC">
-            <img src={logoVero} alt="Vero — Esquadrias em PVC" className="h-11 w-auto object-contain" />
+            <img src={logoVero} alt="Vero — Esquadrias em PVC" className="h-9 w-auto object-contain" />
             <span
-              className="block h-8 w-px"
+              className="block h-6 w-px"
               style={{ backgroundColor: "rgba(26,26,24,0.18)" }}
               aria-hidden
             />
-            <img src={logoBazze} alt="Bazze PVC" className="h-11 w-auto object-contain" />
+            <img src={logoBazze} alt="Bazze PVC" className="h-9 w-auto object-contain" />
           </a>
 
           <ul className="hidden md:flex items-center gap-9 text-[13px]" style={{ color: "var(--vero-ink)" }}>

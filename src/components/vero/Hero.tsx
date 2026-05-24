@@ -1,4 +1,6 @@
 import heroImage from "@/assets/hero-villa.jpg";
+import logoVero from "@/assets/logo-vero.png";
+import logoBazze from "@/assets/logo-bazze.png";
 
 const navLinks = ["Parceria", "Produtos", "Vantagens", "Obras", "Contato"];
 
@@ -11,16 +13,14 @@ export function Hero() {
         style={{ backgroundColor: "rgba(248, 245, 240, 0.78)", borderColor: "rgba(26,26,24,0.08)" }}
       >
         <nav className="mx-auto max-w-[1400px] px-6 lg:px-10 h-16 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-4" aria-label="Vero · Bazze PVC">
+            <img src={logoVero} alt="Vero — Esquadrias em PVC" className="h-7 w-auto object-contain" />
             <span
-              className="grid place-items-center h-8 w-8 rounded-sm text-[13px] font-medium"
-              style={{ backgroundColor: "var(--vero-ink)", color: "var(--vero-bg)", fontFamily: "var(--font-serif)" }}
-            >
-              V
-            </span>
-            <span className="text-[11px] tracking-[0.22em] uppercase font-medium">
-              Vero · Bazze PVC
-            </span>
+              className="block h-6 w-px"
+              style={{ backgroundColor: "rgba(26,26,24,0.18)" }}
+              aria-hidden
+            />
+            <img src={logoBazze} alt="Bazze PVC" className="h-6 w-auto object-contain" />
           </a>
 
           <ul className="hidden md:flex items-center gap-9 text-[13px]" style={{ color: "var(--vero-ink)" }}>

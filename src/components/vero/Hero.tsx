@@ -144,19 +144,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Floating badges over the image area */}
-        <div
-          className="vero-fade-up hidden lg:flex absolute top-28 right-6 lg:right-10 px-4 py-2 rounded-full text-[10px] tracking-[0.22em] uppercase backdrop-blur-md border z-10"
-          style={{
-            backgroundColor: "rgba(248,245,240,0.7)",
-            borderColor: "rgba(248,245,240,0.6)",
-            color: "var(--vero-ink)",
-            animationDelay: "1.1s",
-          }}
-        >
-          PBQP-H <span style={{ color: "var(--vero-gold-deep)" }}>/</span> Único no RS
-        </div>
-
       </section>
     </div>
   );

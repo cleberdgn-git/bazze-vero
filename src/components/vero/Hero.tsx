@@ -12,15 +12,15 @@ export function Hero() {
         className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b"
         style={{ backgroundColor: "rgba(248, 245, 240, 0.78)", borderColor: "rgba(26,26,24,0.08)" }}
       >
-        <nav className="mx-auto max-w-[1400px] px-6 lg:px-10 h-16 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-4" aria-label="Vero · Bazze PVC">
-            <img src={logoVero} alt="Vero — Esquadrias em PVC" className="h-7 w-auto object-contain" />
+        <nav className="mx-auto max-w-[1400px] px-6 lg:px-10 h-20 flex items-center justify-between">
+          <a href="/" className="flex items-center gap-5" aria-label="Vero · Bazze PVC">
+            <img src={logoVero} alt="Vero — Esquadrias em PVC" className="h-11 w-auto object-contain" />
             <span
-              className="block h-6 w-px"
+              className="block h-8 w-px"
               style={{ backgroundColor: "rgba(26,26,24,0.18)" }}
               aria-hidden
             />
-            <img src={logoBazze} alt="Bazze PVC" className="h-6 w-auto object-contain" />
+            <img src={logoBazze} alt="Bazze PVC" className="h-7 w-auto object-contain" />
           </a>
 
           <ul className="hidden md:flex items-center gap-9 text-[13px]" style={{ color: "var(--vero-ink)" }}>
@@ -42,7 +42,7 @@ export function Hero() {
       </header>
 
       {/* Hero */}
-      <section className="pt-16 min-h-screen flex">
+      <section className="pt-20 min-h-screen flex">
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
           {/* Left content */}
           <div className="order-2 lg:order-1 flex items-center px-6 sm:px-10 lg:px-16 py-14 lg:py-20">

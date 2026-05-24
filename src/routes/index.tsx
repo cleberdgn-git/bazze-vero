@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/vero/Hero";
+import { Parceria } from "@/components/vero/Parceria";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -14,5 +15,10 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  return <Hero />;
+  return (
+    <>
+      <Hero />
+      <Parceria />
+    </>
+  );
 }

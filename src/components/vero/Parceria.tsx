@@ -11,58 +11,19 @@ export function Parceria() {
   return (
     <section
       id="parceria"
-      className="relative w-full overflow-hidden py-24 lg:py-32"
-      style={{ color: "var(--vero-ink)" }}
+      className="relative w-full py-24 lg:py-32"
+      style={{ backgroundColor: "var(--vero-bg)", color: "var(--vero-ink)" }}
     >
-      {/* Background image — same hero photo, continues behind this section */}
-      <img
-        src={heroImage}
-        alt=""
-        aria-hidden
-        className="absolute inset-0 h-full w-full object-cover"
-      />
-
-      {/* Horizontal fade (desktop) — left reads as solid bg, right reveals image */}
+      {/* Top fade — dissolves the seam between hero image and this section */}
       <div
         aria-hidden
-        className="absolute inset-0 pointer-events-none hidden lg:block"
+        className="pointer-events-none absolute left-0 right-0 -top-32 h-32"
         style={{
           background:
-            "linear-gradient(to right, var(--vero-bg) 0%, var(--vero-bg) 28%, rgba(248,245,240,0.88) 46%, rgba(248,245,240,0.35) 62%, rgba(248,245,240,0) 78%)",
+            "linear-gradient(to bottom, rgba(248,245,240,0) 0%, rgba(248,245,240,0.35) 45%, rgba(248,245,240,0.75) 75%, var(--vero-bg) 100%)",
         }}
       />
-
-      {/* Vertical fade (mobile) — keep text legible over image */}
-      <div
-        aria-hidden
-        className="absolute inset-0 pointer-events-none lg:hidden"
-        style={{
-          background:
-            "linear-gradient(to top, var(--vero-bg) 0%, rgba(248,245,240,0.92) 40%, rgba(248,245,240,0.4) 70%, rgba(248,245,240,0) 100%)",
-        }}
-      />
-
-      {/* Top seam — soft blend with hero above */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-0 right-0 top-0 h-24"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(248,245,240,0) 0%, rgba(248,245,240,0.25) 60%, rgba(248,245,240,0) 100%)",
-        }}
-      />
-
-      {/* Bottom seam — fade back to bg for the next section */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-0 right-0 bottom-0 h-32"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(248,245,240,0) 0%, rgba(248,245,240,0.6) 55%, var(--vero-bg) 100%)",
-        }}
-      />
-
-      <div className="relative z-10 mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left content */}
           <div className="max-w-[520px]">

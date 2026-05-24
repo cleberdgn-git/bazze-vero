@@ -1,36 +1,18 @@
-## Objetivo
+## Problema
 
-Fazer com que a seção "Parceria" volte a mostrar a imagem de fundo do hero (`hero-villa.jpg`), com o mesmo tratamento de fade horizontal usado no hero — em vez do fundo cremoso sólido (`var(--vero-bg)`) que está cobrindo tudo hoje.
+O header atual tem um gradiente vertical que termina dentro dos seus próprios 80px de altura (`h-20`). Como o `backdrop-blur-[6px]` é aplicado em todo o elemento `<header>`, existe um corte visível na borda inferior do header: tudo acima fica desfocado, tudo abaixo fica nítido. Isso cria a "linha" perceptível que o usuário não quer.
 
-## O que muda
+## Solução
 
-Arquivo: `src/components/vero/Parceria.tsx`
+Eliminar a marcação suavizando tanto o gradiente quanto o blur, de forma que a transição entre header e hero seja imperceptível.
 
-1. **Remover o `backgroundColor` sólido** do `<section>` e o overlay "Top fade" atual (que já assume um fundo cor de creme).
-2. **Adicionar a mesma imagem do hero como background absoluto** da seção (`<img src={heroImage} className="absolute inset-0 w-full h-full object-cover" />`), atrás de todo o conteúdo.
-3. **Replicar o fade horizontal do hero** por cima da imagem, para que:
-   - o lado esquerdo (texto + features) continue legível sobre o fundo cor de creme,
-   - o lado direito (vídeo) deixe a imagem aparecer suavemente atrás.
-   Gradiente igual ao do Hero:
-   `linear-gradient(to right, var(--vero-bg) 0%, var(--vero-bg) 28%, rgba(248,245,240,0.88) 46%, rgba(248,245,240,0.35) 62%, rgba(248,245,240,0) 78%)`
-4. **Mobile**: aplicar um fade vertical equivalente ao do hero, garantindo que os textos sigam legíveis em telas estreitas.
-5. **Costura com o hero (topo) e com o que vier abaixo**: manter um fade suave no topo (de `rgba(248,245,240,0)` → continuação da cena) e adicionar um fade no rodapé voltando para `var(--vero-bg)`, para a próxima seção não ficar com corte seco.
-6. Conteúdo (texto, lista de features, container do vídeo) permanece igual — z-index acima dos overlays.
+### Mudanças em `src/components/vero/Hero.tsx`
 
-Resultado: a transição entre Hero e Parceria deixa de ter aquela faixa cremosa vazia à esquerda do vídeo; a imagem da casa volta a aparecer suavemente como pano de fundo dessa seção, exatamente como no hero.
+1. **Remover o `backdrop-blur` do `<header>`** — é o que cria a borda dura visível, já que o blur só acontece dentro da caixa do header.
+2. **Trocar o gradiente do header por um fade muito mais sutil**, com cor mais transparente no topo e desaparecendo bem antes do fim do header:
+   - `linear-gradient(to bottom, rgba(248,245,240,0.55) 0%, rgba(248,245,240,0.25) 50%, rgba(248,245,240,0) 100%)`
+3. **Reforçar levemente a legibilidade dos logos/links** com um `text-shadow` discreto OU com um leve `drop-shadow` apenas nos elementos do nav, para compensar a remoção do blur sem voltar a poluir.
 
-## Detalhes técnicos
+Resultado: o cabeçalho fica "flutuando" sobre a imagem sem nenhuma linha ou bloco perceptível, integrado ao gradiente geral do hero.
 
-- Reaproveitar o import já existente `import heroImage from "@/assets/hero-villa.jpg";`.
-- Estrutura final do `<section>`:
-  ```text
-  <section relative overflow-hidden>
-    <img heroImage absolute inset-0 object-cover />
-    <div fade-horizontal (lg) absolute inset-0 />
-    <div fade-vertical (mobile) absolute inset-0 />
-    <div fade-top absolute />        // costura com hero
-    <div fade-bottom absolute />     // costura com próxima seção
-    <div relative z-10> ...conteúdo atual... </div>
-  </section>
-  ```
-- Sem mudanças de tokens em `src/styles.css`, sem mudanças no Hero, sem alterar a lógica/estrutura do conteúdo (texto + vídeo).
+Nenhuma outra parte do componente é alterada.

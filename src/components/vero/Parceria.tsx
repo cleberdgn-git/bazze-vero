@@ -23,7 +23,7 @@ export function Parceria() {
             "linear-gradient(to bottom, rgba(248,245,240,0) 0%, rgba(248,245,240,0.35) 45%, rgba(248,245,240,0.75) 75%, var(--vero-bg) 100%)",
         }}
       />
-      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+      <div className="mx-auto max-w-[1680px] px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left content */}
           <div className="max-w-[520px]">

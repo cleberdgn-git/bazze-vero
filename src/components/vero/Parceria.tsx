@@ -85,13 +85,20 @@ export function Parceria() {
             </ul>
           </div>
 
-          {/* Right image */}
+          {/* Right video */}
           <div className="relative w-full h-[460px] lg:h-[620px] overflow-hidden rounded-[12px]">
-            <img
-              src={heroImage}
-              alt="Ambiente de alto padrão com esquadrias Vero · Bazze PVC"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source
+                src="https://res.cloudinary.com/dhpcre0kx/video/upload/v1779653880/202605241652_rpsnm3.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </div>
       </div>

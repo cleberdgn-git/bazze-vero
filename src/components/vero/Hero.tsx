@@ -157,18 +157,6 @@ export function Hero() {
           PBQP-H <span style={{ color: "var(--vero-gold-deep)" }}>/</span> Único no RS
         </div>
 
-        <div
-          className="vero-fade-up hidden lg:flex absolute bottom-8 right-6 lg:right-10 items-center gap-2 px-4 py-2.5 rounded-full text-[12px] backdrop-blur-md border z-10"
-          style={{
-            backgroundColor: "rgba(248,245,240,0.78)",
-            borderColor: "rgba(248,245,240,0.6)",
-            color: "var(--vero-ink)",
-            animationDelay: "1.25s",
-          }}
-        >
-          <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--vero-gold-deep)" }} />
-          Projeto executado pela Vero
-        </div>
       </section>
     </div>
   );

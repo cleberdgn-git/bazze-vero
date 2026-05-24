@@ -85,8 +85,8 @@ export function Parceria() {
             </ul>
           </div>
 
-          {/* Right video */}
-          <div className="relative w-full h-[460px] lg:h-[620px] overflow-hidden rounded-[12px]">
+          {/* Right video — 3:4 aspect ratio */}
+          <div className="relative w-full max-w-[520px] mx-auto aspect-[3/4] overflow-hidden rounded-[12px]">
             <video
               autoPlay
               muted

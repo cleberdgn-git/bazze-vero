@@ -1,6 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -59,10 +60,22 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "DM Sans", sans-serif;
+  --color-vero-bg: var(--vero-bg);
+  --color-vero-ink: var(--vero-ink);
+  --color-vero-muted: var(--vero-muted);
+  --color-vero-gold: var(--vero-gold);
+  --color-vero-gold-deep: var(--vero-gold-deep);
 }
 
 :root {
   --radius: 0.625rem;
+  --vero-bg: #F8F5F0;
+  --vero-ink: #1A1A18;
+  --vero-muted: #6A6A66;
+  --vero-gold: #9A8A72;
+  --vero-gold-deep: #7A6A54;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
@@ -140,5 +153,17 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
   }
 }
+
+@keyframes vero-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes vero-image-in {
+  from { opacity: 0; transform: scale(1.08); }
+  to { opacity: 1; transform: scale(1); }
+}
+.vero-fade-up { opacity: 0; animation: vero-fade-up 0.9s ease-out forwards; }
+.vero-image-in { opacity: 0; animation: vero-image-in 1.6s ease-out forwards; }

@@ -50,7 +50,7 @@ export function Hero() {
               <div className="vero-fade-up flex items-center gap-3 mb-8" style={{ animationDelay: "0.1s" }}>
                 <span className="block h-px w-8" style={{ backgroundColor: "var(--vero-gold)" }} />
                 <span className="text-[11px] tracking-[0.22em] uppercase" style={{ color: "var(--vero-muted)" }}>
-                  Parceira oficial Bazze PVC · Santa Maria
+                  Parceira oficial Bazze PVC · Santa Maria e Região
                 </span>
               </div>
 

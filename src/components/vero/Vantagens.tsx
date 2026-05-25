@@ -28,7 +28,7 @@ const vantagens = [
     icon: Ruler,
     titulo: "Sob Medida Total",
     texto:
-      "Cada vão projetado individualmente — tipologias, ferragens e cores a serviço do projeto.",
+      "Cada vão projetado individualmente, tipologias, ferragens e cores a serviço do projeto.",
   },
 ];
 

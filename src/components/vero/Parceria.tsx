@@ -51,6 +51,16 @@ export function Parceria() {
               className="mt-7 text-[15px] leading-relaxed font-light max-w-[420px]"
               style={{ color: "var(--vero-muted)" }}
             >
+              Como parceira oficial da Bazze PVC em Santa Maria e região, a Vero entrega o
+              portfólio completo da maior fábrica de esquadrias de PVC da América Latina —
+              com atendimento dedicado, projeto sob medida e instalação executada por equipe
+              própria.
+            </p>
+
+            <p
+              className="mt-5 text-[14px] leading-relaxed font-light max-w-[420px]"
+              style={{ color: "var(--vero-muted)" }}
+            >
               Mais de 22 mil m² de parque fabril verticalizado em Portão/RS, certificação
               PBQP-H exclusiva no RS e aderência total às normas NBR15575, NBR10821 e
               NBR16851.

@@ -1,11 +1,23 @@
 import { ArrowRight } from "lucide-react";
 
+const coresEsquadria = [
+  { cor: "#F5F5F0", nome: "Branco" },
+  { cor: "#1A1A18", nome: "Preto Liso" },
+  { cor: "#2A2A28", nome: "Preto Texturado" },
+  { cor: "#8B6914", nome: "Bronze" },
+  { cor: "#5C3D1E", nome: "Amadeirado Nogueira" },
+  { cor: "#B8732A", nome: "Golden Oak" },
+  { cor: "#C8C0B0", nome: "Pirita" },
+  { cor: "#4A4A48", nome: "Grafite" },
+];
+
 /*
   SUBSTITUIR IMAGENS: atualize as URLs abaixo com as imagens reais de cada linha.
   Card 1 — Janelas
   Card 2 — Portas
   Card 3 — bwood+
   Card 4 — Rodapés & Ripados
+  Card 5 — Portas Internas
 */
 const produtos = [
   {
@@ -15,6 +27,7 @@ const produtos = [
     titulo: "Janelas",
     texto:
       "Maxim-ar, de correr, projetantes, oscilo-batentes e pivotantes em todos os perfis Bazze.",
+    temCores: true,
   },
   {
     imagem:
@@ -23,6 +36,7 @@ const produtos = [
     titulo: "Portas",
     texto:
       "Porta-balcão, correr panorâmica, lift & slide e porta de abrir. Perfis esbeltos para grandes vãos.",
+    temCores: true,
   },
   {
     imagem:
@@ -30,7 +44,7 @@ const produtos = [
     numero: "03",
     titulo: "bwood+",
     texto:
-      "Revestimento PVC com textura de madeira. Estética natural com toda a durabilidade do PVC.",
+      "Tecnologia que substitui a madeira convencional. Disponível em Deck, Ripado, Brise e Siding — resistente a umidade, cupins e intempéries, com aparência natural de madeira.",
   },
   {
     imagem:
@@ -39,6 +53,15 @@ const produtos = [
     titulo: "Rodapés & Ripados",
     texto:
       "Acabamento PVC: estabilidade, resistência à umidade e instalação limpa sob medida.",
+  },
+  {
+    /* src="URL_PORTA_INTERNA" */
+    imagem:
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=440&fit=crop",
+    numero: "05",
+    titulo: "Portas Internas",
+    texto:
+      "Kit porta pronta em PVC. Sofisticação, conforto acústico e praticidade. Disponível nos modelos Lisa em Branco e Preto.",
   },
 ];
 
@@ -89,8 +112,8 @@ export function Produtos() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {produtos.map(({ imagem, numero, titulo, texto }) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          {produtos.map(({ imagem, numero, titulo, texto, temCores }) => (
             <div
               key={numero}
               className="group flex flex-col overflow-hidden rounded-[12px] bg-white border border-[#E2DDD5] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)]"
@@ -152,6 +175,31 @@ export function Produtos() {
                     className="text-[#9A8A72] group-hover:text-[#7A6A54] transition-colors duration-300"
                   />
                 </div>
+
+                {/* Paleta de cores — apenas esquadrias */}
+                {temCores && (
+                  <div className="mt-2">
+                    <span
+                      className="text-[11px] font-normal"
+                      style={{
+                        color: "#9A8A72",
+                        fontFamily: "var(--font-sans)",
+                      }}
+                    >
+                      Disponível em 8 cores:
+                    </span>
+                    <div className="flex flex-wrap gap-1 mt-2">
+                      {coresEsquadria.map(({ cor, nome }) => (
+                        <div
+                          key={nome}
+                          title={nome}
+                          className="w-[14px] h-[14px] rounded-full border border-[#E2DDD5]"
+                          style={{ backgroundColor: cor }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}

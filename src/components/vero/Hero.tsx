@@ -74,7 +74,7 @@ export function Hero() {
         />
 
         {/* Content */}
-        <div className="relative z-10 mx-auto max-w-[1680px] px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-28 pt-32 lg:pt-40 pb-14 lg:pb-20 min-h-screen flex items-center">
+        <div className="relative z-10 mx-auto max-w-[1680px] px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-28 py-20 min-h-screen flex items-center">
           <div className="w-full grid grid-cols-1 lg:grid-cols-2">
             <div className="max-w-xl w-full">
               <div className="vero-fade-up flex items-center gap-3 mb-8" style={{ animationDelay: "0.1s" }}>

@@ -69,7 +69,7 @@ export function Produtos() {
   return (
     <section
       id="produtos"
-      className="relative w-full scroll-mt-20 py-20"
+      className="relative w-full scroll-mt-20 py-12"
       style={{ backgroundColor: "var(--vero-bg)", color: "var(--vero-ink)" }}
     >
       <div className="mx-auto max-w-[1680px] px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-28">

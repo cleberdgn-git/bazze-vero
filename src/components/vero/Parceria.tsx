@@ -11,7 +11,7 @@ export function Parceria() {
   return (
     <section
       id="parceria"
-      className="relative w-full scroll-mt-20 py-20"
+      className="relative w-full scroll-mt-20 py-12"
       style={{ backgroundColor: "var(--vero-bg)", color: "var(--vero-ink)" }}
     >
       {/* Top fade — dissolves the seam between hero image and this section */}

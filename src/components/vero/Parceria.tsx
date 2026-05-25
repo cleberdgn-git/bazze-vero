@@ -24,9 +24,9 @@ export function Parceria() {
         }}
       />
       <div className="mx-auto max-w-[1680px] px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-28">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[48fr_52fr] gap-10 items-center">
           {/* Left content */}
-          <div className="max-w-[520px]">
+          <div className="w-full">
             <div className="flex items-center gap-3 mb-8">
               <span className="block h-px w-8" style={{ backgroundColor: "var(--vero-gold)" }} />
               <span
@@ -48,7 +48,7 @@ export function Parceria() {
             </h2>
 
             <p
-              className="mt-7 text-[15px] leading-relaxed font-light max-w-[420px]"
+              className="mt-7 text-[15px] leading-relaxed font-light max-w-full"
               style={{ color: "var(--vero-muted)" }}
             >
               Como parceira oficial da Bazze PVC em Santa Maria e região, a Vero entrega o
@@ -58,7 +58,7 @@ export function Parceria() {
             </p>
 
             <p
-              className="mt-5 text-[14px] leading-relaxed font-light max-w-[420px]"
+              className="mt-5 text-[14px] leading-relaxed font-light max-w-full"
               style={{ color: "var(--vero-muted)" }}
             >
               Mais de 22 mil m² de parque fabril verticalizado em Portão/RS, certificação
@@ -66,23 +66,25 @@ export function Parceria() {
               NBR16851. Garantia de processo industrial rigoroso e produto com procedência comprovada.
             </p>
 
-            <div className="mt-10 grid grid-cols-3 gap-4">
+            <div className="mt-10 flex flex-col gap-[10px] w-full">
               {features.map(({ icon: Icon, label }) => (
                 <div
                   key={label}
-                  className="group flex flex-col items-center text-center rounded-[16px] px-6 py-7 border bg-[#F0EBE3] border-[#E2DDD5] transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#E8E0D4] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+                  className="group flex flex-row items-center gap-3 rounded-[12px] border bg-[#F0EBE3] border-[#E2DDD5] py-4 px-5 h-16 transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#E8E0D4] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
                 >
-                  <Icon
-                    size={22}
-                    strokeWidth={1.4}
-                    style={{ color: "var(--vero-gold-deep)" }}
-                  />
                   <span
-                    className="mt-3 text-[13px] font-medium leading-snug"
-                    style={{
-                      color: "#3A3A38",
-                      letterSpacing: "0.5px",
-                    }}
+                    className="flex shrink-0 items-center justify-center rounded-full"
+                    style={{ width: 40, height: 40, backgroundColor: "#E8E0D4" }}
+                  >
+                    <Icon
+                      size={20}
+                      strokeWidth={1.4}
+                      style={{ color: "var(--vero-gold-deep)" }}
+                    />
+                  </span>
+                  <span
+                    className="text-[13px] font-medium leading-snug"
+                    style={{ color: "#3A3A38", letterSpacing: "0.5px" }}
                   >
                     {label}
                   </span>
@@ -92,7 +94,7 @@ export function Parceria() {
           </div>
 
           {/* Right video — 3:4 aspect ratio */}
-          <div className="relative w-full max-w-[520px] mx-auto aspect-[3/4] overflow-hidden rounded-[12px]">
+          <div className="relative w-full mx-auto aspect-[3/4] overflow-hidden rounded-[12px]">
             <video
               autoPlay
               muted

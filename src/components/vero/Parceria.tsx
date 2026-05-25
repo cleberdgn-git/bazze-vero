@@ -52,7 +52,7 @@ export function Parceria() {
               style={{ color: "var(--vero-muted)" }}
             >
               Como parceira oficial da Bazze PVC em Santa Maria e região, a Vero entrega o
-              portfólio completo da maior fábrica de esquadrias de PVC da América Latina —
+              portfólio completo da maior fábrica de esquadrias de PVC da América Latina,
               com atendimento dedicado, projeto sob medida e instalação executada por equipe
               própria.
             </p>

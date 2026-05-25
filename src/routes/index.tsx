@@ -20,6 +20,7 @@ function Index() {
     <>
       <Hero />
       <Parceria />
+      <Vantagens />
     </>
   );
 }

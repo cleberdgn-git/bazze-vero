@@ -66,26 +66,29 @@ export function Parceria() {
               NBR16851. Garantia de processo industrial rigoroso e produto com procedência comprovada.
             </p>
 
-            <ul
-              className="mt-10 pt-8 border-t grid grid-cols-1 sm:grid-cols-3 gap-6"
-              style={{ borderColor: "rgba(26,26,24,0.12)" }}
-            >
+            <div className="mt-10 grid grid-cols-3 gap-4">
               {features.map(({ icon: Icon, label }) => (
-                <li key={label} className="flex flex-col gap-3">
+                <div
+                  key={label}
+                  className="group flex flex-col items-center text-center rounded-[16px] px-6 py-7 border bg-[#F0EBE3] border-[#E2DDD5] transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#E8E0D4] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+                >
                   <Icon
                     size={22}
                     strokeWidth={1.4}
                     style={{ color: "var(--vero-gold-deep)" }}
                   />
                   <span
-                    className="text-[12px] leading-snug tracking-[0.04em]"
-                    style={{ color: "var(--vero-ink)" }}
+                    className="mt-3 text-[13px] font-medium leading-snug"
+                    style={{
+                      color: "#3A3A38",
+                      letterSpacing: "0.5px",
+                    }}
                   >
                     {label}
                   </span>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Right video — 3:4 aspect ratio */}

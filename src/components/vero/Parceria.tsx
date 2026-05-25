@@ -70,11 +70,7 @@ export function Parceria() {
               {features.map(({ icon: Icon, label }) => (
                 <div
                   key={label}
-                  className="group flex flex-col items-center text-center rounded-[16px] px-6 py-7 border transition-all duration-300 ease-out hover:-translate-y-1"
-                  style={{
-                    backgroundColor: "#F0EBE3",
-                    borderColor: "#E2DDD5",
-                  }}
+                  className="group flex flex-col items-center text-center rounded-[16px] px-6 py-7 border bg-[#F0EBE3] border-[#E2DDD5] transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#E8E0D4] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
                 >
                   <Icon
                     size={22}

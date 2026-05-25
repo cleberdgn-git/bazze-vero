@@ -3,7 +3,7 @@ import heroImage from "@/assets/hero-villa.jpg";
 
 const features = [
   { icon: Award, label: "Maior fábrica PVC da América Latina" },
-  { icon: Ruler, label: "Projeto e instalação própria" },
+  { icon: Ruler, label: "Instalação técnica certificada" },
   { icon: BadgeCheck, label: "PBQP-H exclusivo no RS" },
 ];
 

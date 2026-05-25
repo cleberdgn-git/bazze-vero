@@ -2,7 +2,7 @@ import { Award, Ruler, BadgeCheck } from "lucide-react";
 import heroImage from "@/assets/hero-villa.jpg";
 
 const features = [
-  { icon: Award, label: "Maior fábrica PVC da América Latina" },
+  { icon: Award, label: "Maior fábrica de Esquadrias de PVC da América Latina" },
   { icon: Ruler, label: "Instalação técnica certificada" },
   { icon: BadgeCheck, label: "PBQP-H exclusivo no RS" },
 ];

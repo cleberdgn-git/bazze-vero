@@ -57,7 +57,10 @@ export function Vantagens() {
             className="text-[36px] sm:text-[42px] leading-[1.1] tracking-tight font-normal"
             style={{ fontFamily: "var(--font-serif)" }}
           >
-            Todas as vantagens
+            Todas as{" "}
+            <em className="italic font-normal" style={{ color: "#7A6A54" }}>
+              vantagens
+            </em>
           </h2>
         </div>
 
@@ -66,13 +69,13 @@ export function Vantagens() {
           {vantagens.map(({ icon: Icon, titulo, texto }) => (
             <div
               key={titulo}
-              className="flex flex-col items-center text-center pt-8"
+              className="group flex flex-col items-center text-center pt-8"
               style={{ borderTop: "1px solid #E2DDD5" }}
             >
               <Icon
                 size={28}
                 strokeWidth={1.4}
-                style={{ color: "#9A8A72" }}
+                className="text-[#9A8A72] group-hover:text-[#7A6A54] transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:scale-[1.15]"
               />
               <h3
                 className="mt-4 text-[14px] font-semibold leading-snug"

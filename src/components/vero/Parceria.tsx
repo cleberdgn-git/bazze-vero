@@ -24,7 +24,7 @@ export function Parceria() {
         }}
       />
       <div className="mx-auto max-w-[1680px] px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-28">
-        <div className="grid grid-cols-1 lg:grid-cols-[48fr_52fr] gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[54fr_46fr] gap-10 items-center">
           {/* Left content */}
           <div className="w-full">
             <div className="flex items-center gap-3 mb-8">

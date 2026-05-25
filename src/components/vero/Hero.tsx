@@ -9,7 +9,7 @@ export function Hero() {
     <div className="min-h-screen relative" style={{ backgroundColor: "var(--vero-bg)", color: "var(--vero-ink)" }}>
       {/* Navbar */}
       <header
-        className="fixed top-0 left-0 right-0 z-50"
+        className="fixed top-0 left-0 right-0 z-[100]"
         style={{
           background:
             "linear-gradient(to bottom, rgba(248,245,240,0.55) 0%, rgba(248,245,240,0.25) 55%, rgba(248,245,240,0) 100%)",

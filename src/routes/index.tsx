@@ -22,6 +22,7 @@ function Index() {
       <Hero />
       <Parceria />
       <Vantagens />
+      <Produtos />
     </>
   );
 }

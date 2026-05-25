@@ -38,10 +38,13 @@ export function Parceria() {
             </div>
 
             <h2
-              className="text-[36px] sm:text-[42px] leading-[1.05] tracking-tight font-normal"
+              className="text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.02] tracking-tight font-normal"
               style={{ fontFamily: "var(--font-serif)" }}
             >
-              Vero <span style={{ color: "var(--vero-gold-deep)" }}>×</span> Bazze PVC
+              Vero <span style={{ color: "var(--vero-gold-deep)" }}>×</span>{" "}
+              <em className="italic font-normal" style={{ color: "var(--vero-gold-deep)" }}>
+                Bazze PVC
+              </em>
             </h2>
 
             <p

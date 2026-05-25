@@ -63,10 +63,7 @@ export function Parceria() {
             >
               Mais de 22 mil m² de parque fabril verticalizado em Portão/RS, certificação
               PBQP-H exclusiva no RS e aderência total às normas NBR15575, NBR10821 e
-              NBR16851.
-              <br />
-              <br />
-              Garantia de processo industrial rigoroso e produto com procedência comprovada.
+              NBR16851. Garantia de processo industrial rigoroso e produto com procedência comprovada.
             </p>
 
             <ul

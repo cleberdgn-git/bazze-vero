@@ -192,10 +192,36 @@ export function Produtos() {
                       {coresEsquadria.map(({ cor, nome }) => (
                         <div
                           key={nome}
-                          title={nome}
-                          className="w-[14px] h-[14px] rounded-full border border-[#E2DDD5]"
-                          style={{ backgroundColor: cor }}
-                        />
+                          className="relative inline-block group/cor"
+                        >
+                          <div
+                            className="w-[14px] h-[14px] rounded-full border border-[#E2DDD5] transition-transform duration-200 ease-out group-hover/cor:scale-[1.4]"
+                            style={{ backgroundColor: cor }}
+                          />
+                          <span
+                            className="absolute bottom-[calc(100%+6px)] left-1/2 -translate-x-1/2 opacity-0 group-hover/cor:opacity-100 transition-opacity duration-200 ease-out pointer-events-none whitespace-nowrap z-10"
+                            style={{
+                              backgroundColor: "#1A1A18",
+                              color: "#ffffff",
+                              fontSize: "10px",
+                              letterSpacing: "1px",
+                              padding: "4px 8px",
+                              borderRadius: "4px",
+                            }}
+                          >
+                            {nome}
+                            <span
+                              className="absolute top-full left-1/2 -translate-x-1/2"
+                              style={{
+                                width: 0,
+                                height: 0,
+                                borderLeft: "4px solid transparent",
+                                borderRight: "4px solid transparent",
+                                borderTop: "4px solid #1A1A18",
+                              }}
+                            />
+                          </span>
+                        </div>
                       ))}
                     </div>
                   </div>

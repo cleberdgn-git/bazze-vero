@@ -4,8 +4,13 @@ const vantagens = [
   {
     icon: Wind,
     titulo: "Conforto Termoacústico",
-    texto:
-      "Vedação superior e vidros duplos. Silêncio, conforto térmico e economia de climatização.",
+    texto: (
+      <>
+        Vedação superior e vidros duplos.
+        <br />
+        Silêncio, conforto térmico e economia de climatização.
+      </>
+    ),
   },
   {
     icon: Shield,

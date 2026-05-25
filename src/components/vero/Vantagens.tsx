@@ -36,7 +36,7 @@ export function Vantagens() {
   return (
     <section
       id="vantagens"
-      className="relative w-full py-24"
+      className="relative w-full pt-12 pb-24"
       style={{ backgroundColor: "var(--vero-bg)", color: "var(--vero-ink)" }}
     >
       <div className="mx-auto max-w-[1680px] px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-28">

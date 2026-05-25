@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/vero/Hero";
 import { Parceria } from "@/components/vero/Parceria";
 import { Vantagens } from "@/components/vero/Vantagens";
+import { Produtos } from "@/components/vero/Produtos";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -21,6 +22,7 @@ function Index() {
       <Hero />
       <Parceria />
       <Vantagens />
+      <Produtos />
     </>
   );
 }

@@ -100,16 +100,10 @@ export const ComoFunciona = () => {
                     Etapa {etapa.numero}
                   </span>
                   
-                  <div className={`relative w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-out mb-6 ${
-                    isFirst 
-                      ? 'bg-[#1A1A18] group-hover:bg-[#333330]' 
-                      : 'bg-[#EDE8E0] group-hover:bg-[#E2DDD5]'
-                  }`}>
+                  <div className="relative w-12 h-12 flex items-center justify-center mb-6">
                     <Icone 
                       size={28} 
-                      className={`transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:scale-[1.15] ${
-                        isFirst ? 'text-white' : 'text-[#9A8A72] group-hover:text-[#7A6A54]'
-                      }`} 
+                      className="transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:scale-[1.15] text-[#9A8A72] group-hover:text-[#7A6A54]"
                     />
                     
                     {/* Linha para Mobile/Tablet (Vertical ou Conectores curtos) - Opcional, mantendo foco no grid solicitado */}

@@ -226,25 +226,54 @@ export function Obras() {
       {/* Lightbox / Imagem em tamanho grande */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 transition-all duration-300 animate-in fade-in"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 transition-all duration-300 animate-in fade-in"
           onClick={() => setSelectedImage(null)}
         >
           <button
             type="button"
-            className="absolute right-6 top-6 text-white/70 hover:text-white transition-colors"
+            className="absolute right-6 top-6 text-white/70 hover:text-white transition-colors z-[110]"
             onClick={() => setSelectedImage(null)}
           >
             <X size={32} />
           </button>
+
+          {/* Seta Anterior no Lightbox */}
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              const newIndex = (active - 1 + total) % total;
+              setActive(newIndex);
+              setSelectedImage(obras[newIndex].imagem);
+            }}
+            className="absolute left-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-[110] p-2"
+          >
+            <ChevronLeft size={48} strokeWidth={1} />
+          </button>
+
+          {/* Seta Próximo no Lightbox */}
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              const newIndex = (active + 1) % total;
+              setActive(newIndex);
+              setSelectedImage(obras[newIndex].imagem);
+            }}
+            className="absolute right-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-[110] p-2"
+          >
+            <ChevronRight size={48} strokeWidth={1} />
+          </button>
           
           <div 
-            className="relative max-w-5xl w-full max-h-[90vh] flex items-center justify-center animate-in zoom-in-95 duration-300"
+            className="relative max-w-6xl w-full max-h-[85vh] flex items-center justify-center animate-in zoom-in-95 duration-500"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={selectedImage}
               alt="Obra em tamanho grande"
-              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+              className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl transition-all duration-500"
+              key={selectedImage}
             />
           </div>
         </div>

@@ -103,7 +103,7 @@ export function Parceria() {
               className="w-full h-full object-cover"
             >
               <source
-                src="https://res.cloudinary.com/dhpcre0kx/video/upload/v1779653880/202605241652_rpsnm3.mp4"
+                src="https://res.cloudinary.com/dhpcre0kx/video/upload/v1779798457/J%C3%A1_viu_como_funciona_a_nossa_f%C3%A1brica_Somos_a_maior_produtora_de_esquadria_de_PVC_da_Am%C3%A9rica_La_zghgmo.mp4"
                 type="video/mp4"
               />
             </video>

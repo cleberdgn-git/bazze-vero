@@ -77,7 +77,7 @@ export function Parceria() {
             <div className="mt-8 mb-6 grid grid-cols-2 gap-x-8 gap-y-3">
               {technicalSpecs.map((spec) => (
                 <div key={spec} className="flex items-start gap-2">
-                  <CheckCircle size={16} className="mt-0.5 shrink-0" style={{ color: "var(--vero-gold)" }} />
+                  <CheckCircle size={16} className="mt-0.5 shrink-0" style={{ color: "#22C55E" }} />
                   <span 
                     className="text-[13px] font-normal leading-snug"
                     style={{ color: "#6A6A66", fontFamily: "var(--font-sans)" }}

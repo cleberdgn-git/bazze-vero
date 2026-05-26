@@ -1,51 +1,30 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-/*
-  SUBSTITUIR IMAGENS: troque as URLs pelos arquivos reais de cada obra.
-*/
 const obras = [
   {
-    /* substituir: foto-obra-01.jpg */
-    imagem: "",
-    titulo: "Residência Alphaville",
-    subtitulo: "Janelas Lift & Slide",
+    imagem: "https://res.cloudinary.com/dhpcre0kx/image/upload/v1779804164/Corte_Arq_FINAISCasa_Vale_da_Lua_-19_jcyzwz.jpg",
   },
   {
-    /* substituir: foto-obra-02.jpg */
-    imagem: "",
-    titulo: "Casa Pôr do Sol",
-    subtitulo: "Portas de correr panorâmica",
+    imagem: "https://res.cloudinary.com/dhpcre0kx/image/upload/v1779804160/SC_-_PRETO_wxsbgh.jpg",
   },
   {
-    /* substituir: foto-obra-03.jpg */
-    imagem: "",
-    titulo: "Suíte Master",
-    subtitulo: "Porta-balcão",
+    imagem: "https://res.cloudinary.com/dhpcre0kx/image/upload/v1779804155/IMG_0251_1_c6eip6.jpg",
   },
   {
-    /* substituir: foto-obra-04.jpg */
-    imagem: "",
-    titulo: "Villa Belvedere",
-    subtitulo: "Maxim-ar + Oscilo-batente",
+    imagem: "https://res.cloudinary.com/dhpcre0kx/image/upload/v1779804154/sr_20221215_0370-hdr_pbhcch.jpg",
   },
   {
-    /* substituir: foto-obra-05.jpg */
-    imagem: "",
-    titulo: "Residência Serrana",
-    subtitulo: "bwood+ Ripado",
+    imagem: "https://res.cloudinary.com/dhpcre0kx/image/upload/v1779804154/sr_20221215_0367-hdr_e13hev.jpg",
   },
   {
-    /* substituir: foto-obra-06.jpg */
-    imagem: "",
-    titulo: "Edifício Vivace",
-    subtitulo: "Esquadrias Linha Europa",
+    imagem: "https://res.cloudinary.com/dhpcre0kx/image/upload/v1779804153/IMG_2627_pdoun0.jpg",
   },
   {
-    /* substituir: foto-obra-07.jpg */
-    imagem: "",
-    titulo: "Casa Noturna",
-    subtitulo: "Correr 4 folhas",
+    imagem: "https://res.cloudinary.com/dhpcre0kx/image/upload/v1779804151/124124954_754027895324854_5361963868728686939_n_af1bt3.jpg",
+  },
+  {
+    imagem: "https://res.cloudinary.com/dhpcre0kx/image/upload/v1779804150/124103151_2743412472563602_2133592807727638736_n_liuiso.jpg",
   },
 ];
 
@@ -81,19 +60,19 @@ export function Obras() {
       scale = 0.85;
       rotateY = offset > 0 ? -25 : 25;
       opacity = 0.85;
-      translateX = offset * 150; // Reduzido de 220 para 150
+      translateX = offset * 150;
       zIndex = 40;
     } else if (abs === 2) {
       scale = 0.7;
       rotateY = offset > 0 ? -40 : 40;
       opacity = 0.65;
-      translateX = offset * 220; // Reduzido de 320 para 220
+      translateX = offset * 220;
       zIndex = 30;
     } else {
       scale = 0.5;
       rotateY = offset > 0 ? -50 : 50;
       opacity = 0;
-      translateX = offset * 280; // Reduzido de 380 para 280
+      translateX = offset * 280;
       zIndex = 10;
     }
 
@@ -156,7 +135,7 @@ export function Obras() {
                   key={i}
                   type="button"
                   onClick={() => setActive(i)}
-                  aria-label={obra.titulo}
+                  aria-label="Ver obra"
                   className="group absolute left-1/2 top-1/2 cursor-pointer rounded-[16px] overflow-hidden border-0 p-0"
                   style={{
                     width: 320,
@@ -168,48 +147,12 @@ export function Obras() {
                     ...styleFor(offset),
                   }}
                 >
-                  {obra.imagem ? (
-                    <img
-                      src={obra.imagem}
-                      alt={obra.titulo}
-                      className="h-full w-full object-cover"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div
-                      className="h-full w-full"
-                      style={{ backgroundColor: "#D8D0C4" }}
-                    />
-                  )}
-
-                  {/* Overlay (apenas no central, no hover) */}
-                  {isCenter && (
-                    <div
-                      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end"
-                      style={{
-                        background:
-                          "linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.55) 100%)",
-                      }}
-                    >
-                      <div className="p-6 text-left">
-                        <h3
-                          className="text-[20px] leading-snug font-normal text-white"
-                          style={{ fontFamily: "var(--font-serif)" }}
-                        >
-                          {obra.titulo}
-                        </h3>
-                        <p
-                          className="mt-1 text-[12px] font-light"
-                          style={{
-                            color: "#D4C5B0",
-                            fontFamily: "var(--font-sans)",
-                          }}
-                        >
-                          {obra.subtitulo}
-                        </p>
-                      </div>
-                    </div>
-                  )}
+                  <img
+                    src={obra.imagem}
+                    alt=""
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
                 </button>
               );
             })}

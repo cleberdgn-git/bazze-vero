@@ -88,14 +88,15 @@ export function Parceria() {
           </div>
 
           {/* Right side - Video and Features */}
-          <div className="flex-1 w-full flex flex-col justify-between pt-[92px]">
-            <div className="w-full overflow-hidden rounded-[12px]">
+          <div className="flex-1 w-full flex flex-col pt-[92px] lg:pt-[92px]">
+            <div className="flex-1 min-h-0 w-full overflow-hidden rounded-[12px]">
               <video
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="w-full h-auto aspect-video object-cover block"
+                className="w-full h-full object-cover block"
+                style={{ minAspectRatio: "16/9" }}
               >
                 <source
                   src="https://res.cloudinary.com/dhpcre0kx/video/upload/v1779798457/J%C3%A1_viu_como_funciona_a_nossa_f%C3%A1brica_Somos_a_maior_produtora_de_esquadria_de_PVC_da_Am%C3%A9rica_La_zghgmo.mp4"
@@ -104,7 +105,7 @@ export function Parceria() {
               </video>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-[#E2DDD5] w-full">
+            <div className="mt-4 pt-6 border-t border-[#E2DDD5] w-full">
               <div className="flex flex-row justify-between w-full gap-4">
                 {features.map(({ icon: Icon, label }) => (
                   <div key={label} className="flex flex-col items-center text-center gap-3 flex-1 max-w-[220px]">

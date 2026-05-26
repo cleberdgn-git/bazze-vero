@@ -5,6 +5,7 @@ import { Vantagens } from "@/components/vero/Vantagens";
 import { Produtos } from "@/components/vero/Produtos";
 import { Obras } from "@/components/vero/Obras";
 import { ComoFunciona } from "@/components/vero/ComoFunciona";
+import { Contato } from "@/components/vero/Contato";
 
 export const Route = createFileRoute("/")({
   component: Index,

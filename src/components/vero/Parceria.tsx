@@ -1,5 +1,4 @@
 import { Award, Ruler, BadgeCheck, CheckCircle } from "lucide-react";
-import heroImage from "@/assets/hero-villa.jpg";
 
 const technicalSpecs = [
   "Produtora do próprio perfil",
@@ -8,11 +7,11 @@ const technicalSpecs = [
   "Rigor técnico conforme Normas ABNT",
   "Instalação por equipe especializada",
   "Certificações de Qualidade e Segurança",
+  "Instalação técnica certificada",
 ];
 
 const features = [
   { icon: Award, label: "Maior fábrica de Esquadrias de PVC da América Latina" },
-  { icon: Ruler, label: "Instalação técnica certificada" },
   { icon: BadgeCheck, label: "PBQP-H exclusivo no RS" },
 ];
 

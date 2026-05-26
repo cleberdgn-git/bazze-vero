@@ -66,10 +66,10 @@ export function Parceria() {
               NBR16851. Garantia de processo industrial rigoroso e produto com procedência comprovada.
             </p>
 
-            <div className="mt-12 pt-8 border-t border-[#E2DDD5]">
-              <div className="flex flex-row flex-wrap gap-10">
+            <div className="mt-8 pt-8 border-t border-[#E2DDD5] w-full">
+              <div className="flex flex-row justify-between w-full">
                 {features.map(({ icon: Icon, label }) => (
-                  <div key={label} className="flex flex-col items-start gap-3 max-w-[180px]">
+                  <div key={label} className="flex flex-col items-start gap-3 max-w-[160px]">
                     <Icon
                       size={22}
                       strokeWidth={1.5}

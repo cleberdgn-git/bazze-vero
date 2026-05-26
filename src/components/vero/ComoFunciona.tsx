@@ -57,7 +57,9 @@ export const ComoFunciona = () => {
         />
         <div 
           className="absolute inset-0" 
-          style={{ backgroundColor: 'rgba(248, 245, 240, 0.82)' }}
+          style={{ 
+            background: "linear-gradient(to bottom, #F8F5F0 0%, rgba(248, 245, 240, 0.82) 15%, rgba(248, 245, 240, 0.82) 85%, #F8F5F0 100%)" 
+          }}
         ></div>
       </div>
 

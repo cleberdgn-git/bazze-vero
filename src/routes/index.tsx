@@ -4,6 +4,7 @@ import { Parceria } from "@/components/vero/Parceria";
 import { Vantagens } from "@/components/vero/Vantagens";
 import { Produtos } from "@/components/vero/Produtos";
 import { Obras } from "@/components/vero/Obras";
+import { ComoFunciona } from "@/components/vero/ComoFunciona";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -25,6 +26,7 @@ function Index() {
       <Vantagens />
       <Produtos />
       <Obras />
+      <ComoFunciona />
     </>
   );
 }

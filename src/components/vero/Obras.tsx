@@ -81,8 +81,8 @@ export function Obras() {
       opacity,
       zIndex,
       transition: offset === 0 
-        ? "all 0.9s cubic-bezier(0.34, 1.56, 0.64, 1)" 
-        : "all 0.7s cubic-bezier(0.4, 0, 0.2, 1)",
+        ? "all 1.2s cubic-bezier(0.22, 1, 0.36, 1)" 
+        : "all 0.9s cubic-bezier(0.4, 0, 0.2, 1)",
       transitionProperty: "transform, opacity, box-shadow, scale",
       willChange: "transform, opacity, box-shadow",
     };

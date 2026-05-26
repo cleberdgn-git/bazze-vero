@@ -106,7 +106,7 @@ export function Produtos() {
             className="mt-5 text-[14px] font-light leading-relaxed max-w-[520px]"
             style={{ color: "var(--vero-muted)" }}
           >
-            Da especificação inicial à entrega final, projeto, fabricação Bazze e instalação Vero.
+            Da especificação inicial à entrega final, leitura técnica do projeto, fabricação Bazze e instalação Vero.
             Um único interlocutor.
           </p>
         </div>

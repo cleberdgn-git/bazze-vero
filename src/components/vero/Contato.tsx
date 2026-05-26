@@ -52,7 +52,7 @@ export const Contato = () => {
                   rel="noopener noreferrer"
                   className="text-[#1A1A18] font-dm text-[18px] hover:text-[#9A8A72] transition-colors"
                 >
-                  (55) 99126-5390
+                  (55) 99126-5390 - Cleber Nunes
                 </a>
               </div>
 

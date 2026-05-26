@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const obras = [
   {
@@ -30,6 +30,7 @@ const obras = [
 
 export function Obras() {
   const [active, setActive] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const total = obras.length;
 
   const next = () => setActive((p) => (p + 1) % total);
@@ -138,7 +139,7 @@ export function Obras() {
                 <button
                   key={i}
                   type="button"
-                  onClick={() => setActive(i)}
+                  onClick={() => isCenter ? setSelectedImage(obra.imagem) : setActive(i)}
                   aria-label="Ver obra"
                   className="group absolute left-1/2 top-1/2 cursor-pointer rounded-[16px] overflow-hidden border-0 p-0"
                   style={{
@@ -221,6 +222,33 @@ export function Obras() {
           </a>
         </div>
       </div>
+
+      {/* Lightbox / Imagem em tamanho grande */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 transition-all duration-300 animate-in fade-in"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            type="button"
+            className="absolute right-6 top-6 text-white/70 hover:text-white transition-colors"
+            onClick={() => setSelectedImage(null)}
+          >
+            <X size={32} />
+          </button>
+          
+          <div 
+            className="relative max-w-5xl w-full max-h-[90vh] flex items-center justify-center animate-in zoom-in-95 duration-300"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={selectedImage}
+              alt="Obra em tamanho grande"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

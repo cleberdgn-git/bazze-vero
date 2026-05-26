@@ -108,7 +108,7 @@ export function Obras() {
   return (
     <section
       id="obras"
-      className="relative w-full scroll-mt-20 py-24 overflow-hidden"
+      className="relative w-full scroll-mt-20 py-24"
       style={{ backgroundColor: "var(--vero-bg)", color: "var(--vero-ink)" }}
     >
       <div className="mx-auto max-w-[1680px] px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-28">
@@ -143,7 +143,7 @@ export function Obras() {
         </div>
 
         {/* Carrossel */}
-        <div className="relative overflow-hidden">
+        <div className="relative">
           <div
             className="relative mx-auto h-[460px] w-full max-w-[1100px]"
             style={{ perspective: "1200px" }}

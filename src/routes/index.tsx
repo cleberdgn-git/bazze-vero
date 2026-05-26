@@ -29,6 +29,7 @@ function Index() {
       <Obras />
       <ComoFunciona />
       <Contato />
+      <Rodape />
     </>
   );
 }

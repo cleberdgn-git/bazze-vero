@@ -89,14 +89,13 @@ export function Parceria() {
 
           {/* Right side - Video and Features */}
           <div className="flex-1 w-full flex flex-col pt-[92px] lg:pt-[92px]">
-            <div className="flex-1 min-h-0 w-full overflow-hidden rounded-[12px]">
+            <div className="flex-1 min-h-[200px] w-full overflow-hidden rounded-[12px]">
               <video
                 autoPlay
                 muted
                 loop
                 playsInline
                 className="w-full h-full object-cover block"
-                style={{ minAspectRatio: "16/9" }}
               >
                 <source
                   src="https://res.cloudinary.com/dhpcre0kx/video/upload/v1779798457/J%C3%A1_viu_como_funciona_a_nossa_f%C3%A1brica_Somos_a_maior_produtora_de_esquadria_de_PVC_da_Am%C3%A9rica_La_zghgmo.mp4"

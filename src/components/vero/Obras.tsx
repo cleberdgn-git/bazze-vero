@@ -80,7 +80,8 @@ export function Obras() {
       transform: `translate(-50%, -50%) translateX(${translateX}px) scale(${scale}) rotateY(${rotateY}deg)`,
       opacity,
       zIndex,
-      transition: "all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      transition: "all 0.7s cubic-bezier(0.4, 0, 0.2, 1)",
+      willChange: "transform, opacity",
     };
   };
 

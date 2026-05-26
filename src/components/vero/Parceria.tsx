@@ -31,9 +31,9 @@ export function Parceria() {
         }}
       />
       <div className="mx-auto max-w-[1680px] px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-28">
-        <div className="grid grid-cols-1 lg:grid-cols-[54fr_46fr] gap-10 items-start">
+        <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-20">
           {/* Left content */}
-          <div className="w-full">
+          <div className="flex-1 w-full">
             <div className="flex items-center gap-3 mb-8">
               <span className="block h-px w-8" style={{ backgroundColor: "var(--vero-gold)" }} />
               <span
@@ -88,23 +88,25 @@ export function Parceria() {
           </div>
 
           {/* Right side - Video and Features */}
-          <div className="flex flex-col gap-6 w-full pt-[92px]">
-            <div className="relative w-full aspect-video overflow-hidden rounded-[12px]">
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover"
-              >
-                <source
-                  src="https://res.cloudinary.com/dhpcre0kx/video/upload/v1779798457/J%C3%A1_viu_como_funciona_a_nossa_f%C3%A1brica_Somos_a_maior_produtora_de_esquadria_de_PVC_da_Am%C3%A9rica_La_zghgmo.mp4"
-                  type="video/mp4"
-                />
-              </video>
+          <div className="flex-1 w-full flex flex-col pt-[92px] justify-between self-stretch">
+            <div className="flex flex-col gap-4">
+              <div className="relative w-full aspect-video overflow-hidden rounded-[12px]">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source
+                    src="https://res.cloudinary.com/dhpcre0kx/video/upload/v1779798457/J%C3%A1_viu_como_funciona_a_nossa_f%C3%A1brica_Somos_a_maior_produtora_de_esquadria_de_PVC_da_Am%C3%A9rica_La_zghgmo.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
             </div>
 
-            <div className="pt-6 border-t border-[#E2DDD5] w-full">
+            <div className="mt-4 pt-6 border-t border-[#E2DDD5] w-full">
               <div className="flex flex-row justify-between w-full gap-4">
                 {features.map(({ icon: Icon, label }) => (
                   <div key={label} className="flex flex-col items-center text-center gap-3 flex-1 max-w-[220px]">

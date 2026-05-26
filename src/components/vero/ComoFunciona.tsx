@@ -47,8 +47,21 @@ const etapas = [
 
 export const ComoFunciona = () => {
   return (
-    <section className="py-20 bg-[#F8F5F0] overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="py-20 relative overflow-hidden">
+      {/* IMAGEM DE FUNDO COM OVERLAY */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://res.cloudinary.com/dhpcre0kx/image/upload/v1779797114/IMG_0254_ufjumr.jpg" 
+          alt="Background" 
+          className="w-full h-full object-cover"
+        />
+        <div 
+          className="absolute inset-0" 
+          style={{ backgroundColor: 'rgba(248, 245, 240, 0.82)' }}
+        ></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         {/* CABEÇALHO */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-4">

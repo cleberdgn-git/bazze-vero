@@ -1,5 +1,14 @@
-import { Award, Ruler, BadgeCheck } from "lucide-react";
+import { Award, Ruler, BadgeCheck, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-villa.jpg";
+
+const technicalSpecs = [
+  "Produtora do próprio perfil",
+  "Produção verticalizada",
+  "Garantia de 10 anos dos perfis",
+  "Rigor técnico conforme Normas ABNT",
+  "Instalação por equipe especializada",
+  "Certificações de Qualidade e Segurança",
+];
 
 const features = [
   { icon: Award, label: "Maior fábrica de Esquadrias de PVC da América Latina" },

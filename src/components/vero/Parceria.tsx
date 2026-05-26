@@ -1,5 +1,4 @@
 import { Award, Ruler, BadgeCheck, CheckCircle } from "lucide-react";
-import heroImage from "@/assets/hero-villa.jpg";
 
 const technicalSpecs = [
   "Produtora do próprio perfil",
@@ -8,11 +7,11 @@ const technicalSpecs = [
   "Rigor técnico conforme Normas ABNT",
   "Instalação por equipe especializada",
   "Certificações de Qualidade e Segurança",
+  "Instalação técnica certificada",
 ];
 
 const features = [
   { icon: Award, label: "Maior fábrica de Esquadrias de PVC da América Latina" },
-  { icon: Ruler, label: "Instalação técnica certificada" },
   { icon: BadgeCheck, label: "PBQP-H exclusivo no RS" },
 ];
 
@@ -33,7 +32,7 @@ export function Parceria() {
         }}
       />
       <div className="mx-auto max-w-[1680px] px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-28">
-        <div className="grid grid-cols-1 lg:grid-cols-[54fr_46fr] gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[54fr_46fr] gap-10 items-start">
           {/* Left content */}
           <div className="w-full">
             <div className="flex items-center gap-3 mb-8">
@@ -74,7 +73,7 @@ export function Parceria() {
               PBQP-H exclusiva no RS e aderência total às normas NBR15575, NBR10821 e
               NBR16851. Garantia de processo industrial rigoroso e produto com procedência comprovada.
             </p>
-            <div className="mt-8 mb-6 grid grid-cols-2 gap-x-8 gap-y-3">
+            <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-3">
               {technicalSpecs.map((spec) => (
                 <div key={spec} className="flex items-start gap-2">
                   <CheckCircle size={16} className="mt-0.5 shrink-0" style={{ color: "#22C55E" }} />
@@ -87,11 +86,29 @@ export function Parceria() {
                 </div>
               ))}
             </div>
+          </div>
 
-            <div className="pt-8 border-t border-[#E2DDD5] w-full">
-              <div className="flex flex-row justify-between w-full">
+          {/* Right side - Video and Features */}
+          <div className="flex flex-col gap-6 w-full pt-[92px]">
+            <div className="relative w-full aspect-video overflow-hidden rounded-[12px]">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source
+                  src="https://res.cloudinary.com/dhpcre0kx/video/upload/v1779798457/J%C3%A1_viu_como_funciona_a_nossa_f%C3%A1brica_Somos_a_maior_produtora_de_esquadria_de_PVC_da_Am%C3%A9rica_La_zghgmo.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <div className="pt-6 border-t border-[#E2DDD5] w-full">
+              <div className="flex flex-row justify-between w-full gap-4">
                 {features.map(({ icon: Icon, label }) => (
-                  <div key={label} className="flex flex-col items-center text-center gap-3 max-w-[160px]">
+                  <div key={label} className="flex flex-col items-center text-center gap-3 flex-1 max-w-[220px]">
                     <Icon
                       size={22}
                       strokeWidth={1.5}
@@ -107,22 +124,6 @@ export function Parceria() {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Right video — 16:9 aspect ratio */}
-          <div className="relative w-full mx-auto aspect-video overflow-hidden rounded-[12px]">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-full object-cover"
-            >
-              <source
-                src="https://res.cloudinary.com/dhpcre0kx/video/upload/v1779798457/J%C3%A1_viu_como_funciona_a_nossa_f%C3%A1brica_Somos_a_maior_produtora_de_esquadria_de_PVC_da_Am%C3%A9rica_La_zghgmo.mp4"
-                type="video/mp4"
-              />
-            </video>
           </div>
         </div>
       </div>

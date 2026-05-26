@@ -75,7 +75,7 @@ export const ComoFunciona = () => {
             Como <span className="italic text-[#7A6A54]">funciona</span>
           </h2>
           <p className="text-[#6A6A66] font-dm text-sm md:text-base max-w-[480px] mx-auto leading-relaxed">
-            Do projeto à entrega — um processo transparente, técnico e sem surpresas.
+            Do projeto à entrega, um processo transparente, técnico e sem surpresas.
           </p>
         </div>
 

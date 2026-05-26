@@ -80,20 +80,20 @@ export function Obras() {
     } else if (abs === 1) {
       scale = 0.85;
       rotateY = offset > 0 ? -25 : 25;
-      opacity = 0.75;
-      translateX = offset * 220;
+      opacity = 0.85;
+      translateX = offset * 150; // Reduzido de 220 para 150
       zIndex = 40;
     } else if (abs === 2) {
       scale = 0.7;
       rotateY = offset > 0 ? -40 : 40;
-      opacity = 0.5;
-      translateX = offset * 320;
+      opacity = 0.65;
+      translateX = offset * 220; // Reduzido de 320 para 220
       zIndex = 30;
     } else {
       scale = 0.5;
       rotateY = offset > 0 ? -50 : 50;
       opacity = 0;
-      translateX = offset * 380;
+      translateX = offset * 280; // Reduzido de 380 para 280
       zIndex = 10;
     }
 

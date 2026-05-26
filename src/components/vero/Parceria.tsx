@@ -1,5 +1,14 @@
-import { Award, Ruler, BadgeCheck } from "lucide-react";
+import { Award, Ruler, BadgeCheck, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-villa.jpg";
+
+const technicalSpecs = [
+  "Produtora do próprio perfil",
+  "Produção verticalizada",
+  "Garantia de 10 anos dos perfis",
+  "Rigor técnico conforme Normas ABNT",
+  "Instalação por equipe especializada",
+  "Certificações de Qualidade e Segurança",
+];
 
 const features = [
   { icon: Award, label: "Maior fábrica de Esquadrias de PVC da América Latina" },
@@ -65,8 +74,21 @@ export function Parceria() {
               PBQP-H exclusiva no RS e aderência total às normas NBR15575, NBR10821 e
               NBR16851. Garantia de processo industrial rigoroso e produto com procedência comprovada.
             </p>
+            <div className="mt-8 mb-6 grid grid-cols-2 gap-x-8 gap-y-3">
+              {technicalSpecs.map((spec) => (
+                <div key={spec} className="flex items-start gap-2">
+                  <CheckCircle size={16} className="mt-0.5 shrink-0" style={{ color: "var(--vero-gold)" }} />
+                  <span 
+                    className="text-[13px] font-normal leading-snug"
+                    style={{ color: "#6A6A66", fontFamily: "var(--font-sans)" }}
+                  >
+                    {spec}
+                  </span>
+                </div>
+              ))}
+            </div>
 
-            <div className="mt-8 pt-8 border-t border-[#E2DDD5] w-full">
+            <div className="pt-8 border-t border-[#E2DDD5] w-full">
               <div className="flex flex-row justify-between w-full">
                 {features.map(({ icon: Icon, label }) => (
                   <div key={label} className="flex flex-col items-center text-center gap-3 max-w-[160px]">

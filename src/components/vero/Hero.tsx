@@ -62,7 +62,6 @@ export function Hero() {
             filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.3))",
           }}
         />
-        />
 
         {/* Horizontal fade (desktop) — left side reads as background, right reveals image */}
         <div

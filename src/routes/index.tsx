@@ -28,6 +28,7 @@ function Index() {
       <Produtos />
       <Obras />
       <ComoFunciona />
+      <Contato />
     </>
   );
 }

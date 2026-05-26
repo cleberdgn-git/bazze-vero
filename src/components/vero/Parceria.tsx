@@ -69,7 +69,7 @@ export function Parceria() {
             <div className="mt-8 pt-8 border-t border-[#E2DDD5] w-full">
               <div className="flex flex-row justify-between w-full">
                 {features.map(({ icon: Icon, label }) => (
-                  <div key={label} className="flex flex-col items-start gap-3 max-w-[160px]">
+                  <div key={label} className="flex flex-col items-center text-center gap-3 max-w-[160px]">
                     <Icon
                       size={22}
                       strokeWidth={1.5}

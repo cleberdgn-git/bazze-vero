@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const obras = [
@@ -32,6 +32,25 @@ export function Obras() {
   const [active, setActive] = useState(0);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const total = obras.length;
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedImage(null);
+      } else if (e.key === "ArrowRight" && selectedImage) {
+        const nextIndex = (active + 1) % total;
+        setActive(nextIndex);
+        setSelectedImage(obras[nextIndex].imagem);
+      } else if (e.key === "ArrowLeft" && selectedImage) {
+        const prevIndex = (active - 1 + total) % total;
+        setActive(prevIndex);
+        setSelectedImage(obras[prevIndex].imagem);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [active, selectedImage, total]);
 
   const next = () => setActive((p) => (p + 1) % total);
   const prev = () => setActive((p) => (p - 1 + total) % total);

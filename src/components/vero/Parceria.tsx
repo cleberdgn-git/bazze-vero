@@ -1,4 +1,4 @@
-import { Award, Ruler, BadgeCheck, CheckCircle } from "lucide-react";
+import { Award, BadgeCheck, CheckCircle } from "lucide-react";
 
 const technicalSpecs = [
   "Produtora do próprio perfil",
@@ -7,7 +7,6 @@ const technicalSpecs = [
   "Rigor técnico conforme Normas ABNT",
   "Instalação por equipe especializada",
   "Certificações de Qualidade e Segurança",
-  "Instalação técnica certificada",
 ];
 
 const features = [

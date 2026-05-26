@@ -66,30 +66,24 @@ export function Parceria() {
               NBR16851. Garantia de processo industrial rigoroso e produto com procedência comprovada.
             </p>
 
-            <div className="mt-10 flex flex-col gap-[10px] w-full">
-              {features.map(({ icon: Icon, label }) => (
-                <div
-                  key={label}
-                  className="group flex flex-row items-center gap-3 rounded-[12px] border bg-[#F0EBE3] border-[#E2DDD5] py-4 px-5 h-16 transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#E8E0D4] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
-                >
-                  <span
-                    className="flex shrink-0 items-center justify-center rounded-full"
-                    style={{ width: 40, height: 40, backgroundColor: "#E8E0D4" }}
-                  >
+            <div className="mt-12 pt-8 border-t border-[#E2DDD5]">
+              <div className="flex flex-row flex-wrap gap-10">
+                {features.map(({ icon: Icon, label }) => (
+                  <div key={label} className="flex flex-col items-start gap-3 max-w-[180px]">
                     <Icon
-                      size={20}
-                      strokeWidth={1.4}
-                      style={{ color: "var(--vero-gold-deep)" }}
+                      size={22}
+                      strokeWidth={1.5}
+                      style={{ color: "var(--vero-gold)" }}
                     />
-                  </span>
-                  <span
-                    className="text-[13px] font-medium leading-snug"
-                    style={{ color: "#3A3A38", letterSpacing: "0.5px" }}
-                  >
-                    {label}
-                  </span>
-                </div>
-              ))}
+                    <span
+                      className="text-[12px] font-normal leading-tight"
+                      style={{ color: "#6A6A66", fontFamily: "var(--font-sans)" }}
+                    >
+                      {label}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 

@@ -21,12 +21,6 @@ export function Hero() {
         >
           <a href="/" className="flex items-center gap-5" aria-label="Vero · Bazze PVC">
             <img src={logoVero} alt="Vero — Esquadrias em PVC" className="h-9 w-auto object-contain" />
-            <span
-              className="block h-6 w-px"
-              style={{ backgroundColor: "rgba(26,26,24,0.18)" }}
-              aria-hidden
-            />
-            <img src={logoBazze} alt="Bazze PVC" className="h-9 w-auto object-contain" />
           </a>
 
           <ul className="hidden md:flex items-center gap-9 text-[13px]" style={{ color: "var(--vero-ink)" }}>
@@ -54,6 +48,19 @@ export function Hero() {
           src={heroImage}
           alt="Residência de alto padrão com esquadrias Vero · Bazze PVC e vista para o mar"
           className="vero-image-in absolute inset-0 h-full w-full object-cover"
+        />
+
+        {/* Bazze logo sobre a imagem */}
+        <img
+          src={logoBazze}
+          alt="Bazze PVC"
+          className="absolute z-[5] h-9 w-auto object-contain pointer-events-none"
+          style={{
+            top: "38%",
+            left: "50%",
+            transform: "translateX(-50%)",
+            filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.3))",
+          }}
         />
 
         {/* Horizontal fade (desktop) — left side reads as background, right reveals image */}
